@@ -4,20 +4,24 @@
 <meta name="description" content="EFESTO – crea mappe mentali libere, colorate e stampabili.">
 <title>EFESTO</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 </head><body>
 <div id="cv"><svg id="sv"><g id="vp"></g></svg>
  <div class="float" id="tb" style="display:none">
-  <button id="t-ed" title="Modifica testo">✎</button><span class="dv"></span>
+  <div class="row"><button id="t-ed" title="Modifica testo">✎</button><span class="dv"></span>
   <span id="sws" style="display:flex;align-items:center"></span><input type="color" id="cc" title="Colore personalizzato"><span class="dv"></span>
-  <button id="t-sh" title="Cambia forma"></button><button id="t-im" title="Aggiungi immagine">▣</button><button id="t-rm" title="Togli immagine" style="font-size:12px">✕ foto</button><button id="t-del" title="Elimina ramo">🗑</button>
+  <button id="t-sh" title="Cambia forma"></button><button id="t-im" title="Aggiungi immagine">▣</button><button id="t-rm" title="Togli immagine" style="font-size:12px">✕ foto</button><button id="t-lk" title="Sposta il collegamento su un altro ramo">🔗</button><button id="t-au" title="Dimensione automatica" style="display:none">⤢</button><button id="t-del" title="Elimina ramo">🗑</button></div>
+  <div class="row"><select id="t-font" title="Carattere"></select><select id="t-size" title="Dimensione del testo"></select><span class="dv"></span>
+  <button id="t-b" title="Grassetto"><b>B</b></button><button id="t-i" title="Corsivo"><i style="font-family:Georgia,serif">I</i></button><button id="t-u" title="Sottolineato"><u>U</u></button><span class="dv"></span>
+  <button id="t-al" title="Allinea a sinistra"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h12M2 7h8M2 11h12M2 15h7"/></svg></button><button id="t-ac" title="Centra"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h12M4 7h8M2 11h12M5 15h6"/></svg></button><button id="t-ar" title="Allinea a destra"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h12M6 7h8M2 11h12M7 15h7"/></svg></button></div>
  </div>
 </div>
 <aside id="dr"><button class="nw" id="nw">+ Nuova mappa</button><div id="ml"></div><small>Le mappe si salvano da sole in questo browser. Per un backup scarica il file dal menu in alto a destra.</small></aside>
 <div id="top">
  <div class="brand"><b>EFEST<i>O</i></b><input id="nm" placeholder="Senza titolo" aria-label="Nome della mappa"></div>
  <div class="pill"><button id="bm" title="Le mie mappe">☰</button><button id="ex" title="Salva, scarica, stampa">⤓</button>
-  <div class="menu" id="menu"><button data-a="png">Scarica immagine (PNG)</button><button data-a="svg">Scarica vettoriale (SVG)</button><button data-a="json">Scarica mappa (JSON)</button><button data-a="print">Stampa</button><hr><button data-a="imp">Importa mappa (JSON)</button></div></div>
+  <div class="menu" id="menu"><button data-a="pdf">Scarica PDF</button><button data-a="png">Scarica immagine (PNG)</button><button data-a="svg">Scarica vettoriale (SVG)</button><button data-a="json">Scarica mappa (JSON)</button><button data-a="print">Stampa</button><hr><button data-a="imp">Importa mappa (JSON)</button></div></div>
 </div>
 <div class="float" id="bl"><button id="un" title="Annulla">↶</button><button id="zo" title="Riduci">−</button><button id="fit" title="Centra">⌖</button><button id="zi" title="Ingrandisci">+</button></div>
 <div id="fab"><span id="lb"></span><button id="ac" title="Aggiungi un ramo">+</button></div>

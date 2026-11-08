@@ -14,6 +14,10 @@ button{background:none;border:0;cursor:pointer;border-radius:10px}
 .float button{min-width:34px;height:34px;display:grid;place-items:center;font-size:16px}
 .float button:hover:not(:disabled){background:var(--bg)}
 .float button:disabled{opacity:.3;cursor:default}
+.float button.on{background:var(--bg);color:var(--acc)}
+#tb{flex-direction:column;align-items:stretch;gap:2px;max-width:calc(100% - 16px)}
+.row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:2px}
+.float select{height:32px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;padding:0 6px;max-width:150px;cursor:pointer}
 #top{position:absolute;left:0;right:0;top:env(safe-area-inset-top,0px);display:flex;justify-content:space-between;align-items:flex-start;padding:14px 16px;pointer-events:none;z-index:6}
 #top>*{pointer-events:auto}
 .brand b{display:block;font-size:13px;letter-spacing:.32em;font-weight:800}
@@ -55,3 +59,11 @@ body.printing #pa{display:flex;flex-direction:column;align-items:center;justify-
 #pa h1{font:600 12pt system-ui,sans-serif;margin:0 0 3mm;color:#444;align-self:flex-start}
 #pa svg{display:block;max-width:100%;break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 @page{size:A4;margin:10mm}
+.add{opacity:0;pointer-events:none;cursor:pointer}
+.add circle{fill:var(--acc);stroke:var(--panel);stroke-width:2}
+.add path{stroke:#fff;stroke-width:2;stroke-linecap:round;fill:none}
+.nd:hover .add,.nd.sel .add{opacity:1;pointer-events:all}
+.rz{display:none;cursor:nwse-resize}
+.nd.sel .rz{display:block}
+.rz rect{fill:var(--panel);stroke:var(--acc);stroke-width:2}
+.nd.tg .sh{stroke:var(--acc);stroke-width:4;stroke-dasharray:6 4}
