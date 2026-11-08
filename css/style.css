@@ -49,8 +49,9 @@ button{background:none;border:0;cursor:pointer;border-radius:10px}
 #ts{position:fixed;left:50%;top:70px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:20px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:50;max-width:90%}
 #ts.on{opacity:1}
 #pa{display:none}
-body.printing{overflow:visible}
-body.printing #cv,body.printing #top,body.printing #bl,body.printing #fab,body.printing #dr,body.printing .float{display:none}
-body.printing #pa{display:block}
-#pa svg{width:100%;height:auto;max-height:100vh}
-@page{size:landscape;margin:8mm}
+html.printing,body.printing{height:auto;overflow:visible}
+body.printing #cv,body.printing #top,body.printing #bl,body.printing #fab,body.printing #dr,body.printing .float,body.printing #ts{display:none}
+body.printing #pa{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+#pa h1{font:600 12pt system-ui,sans-serif;margin:0 0 3mm;color:#444;align-self:flex-start}
+#pa svg{display:block;max-width:100%;break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@page{size:A4;margin:10mm}
