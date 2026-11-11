@@ -2,29 +2,45 @@
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="EFESTO – crea mappe mentali libere, colorate e stampabili.">
+<meta name="theme-color" content="#f5f5f7">
 <title>EFESTO</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 </head><body>
 <div id="cv"><svg id="sv"><g id="vp"></g></svg>
- <div class="float" id="tb" style="display:none">
-  <div class="row"><button id="t-ed" title="Modifica testo">✎</button><span class="dv"></span>
-  <span id="sws" style="display:flex;align-items:center"></span><input type="color" id="cc" title="Colore personalizzato"><span class="dv"></span>
-  <button id="t-sh" title="Cambia forma"></button><button id="t-im" title="Aggiungi immagine">▣</button><button id="t-rm" title="Togli immagine" style="font-size:12px">✕ foto</button><button id="t-lk" title="Sposta il collegamento su un altro ramo">🔗</button><button id="t-au" title="Dimensione automatica" style="display:none">⤢</button><button id="t-del" title="Elimina ramo">🗑</button></div>
-  <div class="row"><select id="t-font" title="Carattere"></select><select id="t-size" title="Dimensione del testo"></select><span class="dv"></span>
-  <button id="t-b" title="Grassetto"><b>B</b></button><button id="t-i" title="Corsivo"><i style="font-family:Georgia,serif">I</i></button><button id="t-u" title="Sottolineato"><u>U</u></button><span class="dv"></span>
-  <button id="t-al" title="Allinea a sinistra"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h12M2 7h8M2 11h12M2 15h7"/></svg></button><button id="t-ac" title="Centra"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h12M4 7h8M2 11h12M5 15h6"/></svg></button><button id="t-ar" title="Allinea a destra"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h12M6 7h8M2 11h12M7 15h7"/></svg></button></div>
+ <div class="float gl" id="tb" style="display:none">
+  <div class="row"><select id="t-font" title="Carattere"></select><select id="t-size" title="Dimensione del testo"></select>
+   <div class="sg"><button id="t-b" title="Grassetto (Ctrl+B)"><b>B</b></button><button id="t-i" title="Corsivo (Ctrl+I)"><i style="font-family:Georgia,serif">I</i></button><button id="t-u" title="Sottolineato (Ctrl+U)"><u>U</u></button></div>
+   <div class="sg"><button id="t-al" title="Allinea a sinistra"><svg viewBox="0 0 16 16"><path d="M2 3h12M2 7h8M2 11h12M2 15h7"/></svg></button><button id="t-ac" title="Centra"><svg viewBox="0 0 16 16"><path d="M2 3h12M4 7h8M2 11h12M5 15h6"/></svg></button><button id="t-ar" title="Allinea a destra"><svg viewBox="0 0 16 16"><path d="M2 3h12M6 7h8M2 11h12M7 15h7"/></svg></button></div></div>
+  <div class="row"><span id="sws" style="display:flex;align-items:center;gap:6px"></span><input type="color" id="cc" title="Colore personalizzato"></div>
+  <div class="row">
+   <button id="t-ed" title="Modifica testo"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19l-4 1z"/></svg></button>
+   <button id="t-sh" title="Cambia forma"></button>
+   <button id="t-im" title="Aggiungi immagine"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4.5 4 3.5 3-2.5 4 3.5"/></svg></button>
+   <button id="t-rm" title="Togli immagine"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><path d="M5 4l14 16"/></svg></button>
+   <button id="t-lk" title="Sposta il collegamento su un altro ramo"><svg viewBox="0 0 24 24"><path d="M10 14l4-4"/><path d="M11.5 7l1-1a3.5 3.5 0 0 1 5 5l-1 1M12.5 17l-1 1a3.5 3.5 0 0 1-5-5l1-1"/></svg></button>
+   <button id="t-au" title="Dimensione automatica" style="display:none"><svg viewBox="0 0 24 24"><path d="M8 4H4v4M16 20h4v-4M4 4l6 6M20 20l-6-6"/></svg></button>
+   <button id="t-del" title="Elimina ramo" class="danger"><svg viewBox="0 0 24 24"><path d="M4.5 7h15M10 7V4.5h4V7M6.5 7l.8 12a1.5 1.5 0 0 0 1.5 1.4h6.4a1.5 1.5 0 0 0 1.5-1.4l.8-12M10 11v6M14 11v6"/></svg></button>
+  </div>
  </div>
 </div>
-<aside id="dr"><button class="nw" id="nw">+ Nuova mappa</button><div id="ml"></div><small>Le mappe si salvano da sole in questo browser. Per un backup scarica il file dal menu in alto a destra.</small></aside>
+<aside id="dr" class="gl"><div class="dh"><h2>Mappe</h2><button class="ib" id="nw" title="Nuova mappa"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button></div><div id="ml"></div>
+ <button class="lnk" id="imp">Importa mappa…</button><small>Le mappe si salvano da sole in questo browser. Per un backup o per aprirle altrove usa Esporta › JSON.</small></aside>
 <div id="top">
- <div class="brand"><b>EFEST<i>O</i></b><input id="nm" placeholder="Senza titolo" aria-label="Nome della mappa"></div>
- <div class="pill"><button id="bm" title="Le mie mappe">☰</button><button id="ex" title="Salva, scarica, stampa">⤓</button>
-  <div class="menu" id="menu"><button data-a="pdf">Scarica PDF</button><button data-a="png">Scarica immagine (PNG)</button><button data-a="svg">Scarica vettoriale (SVG)</button><button data-a="json">Scarica mappa (JSON)</button><button data-a="print">Stampa</button><hr><button data-a="imp">Importa mappa (JSON)</button></div></div>
+ <div class="gl lt"><button class="ib" id="bm" title="Le mie mappe"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="3.5"/><path d="M9.5 4.5v15"/></svg></button>
+  <div class="logo"><i><svg viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.2 1 1.8 1.8 2C10.5 8 11 5.5 12 3z" fill="#fff" stroke="none"/></svg></i><span>EFESTO</span></div></div>
+ <input id="nm" placeholder="Senza titolo" aria-label="Nome della mappa">
+ <div class="gl rt"><button class="ib" id="ex" title="Esporta e stampa"><svg viewBox="0 0 24 24"><path d="M12 15V3.5M8 7l4-4 4 4"/><path d="M8 10.5H6.2A2.2 2.2 0 0 0 4 12.7v5.1A2.2 2.2 0 0 0 6.2 20h11.6a2.2 2.2 0 0 0 2.2-2.2v-5.1a2.2 2.2 0 0 0-2.2-2.2H16"/></svg></button></div>
 </div>
-<div class="float" id="bl"><button id="un" title="Annulla">↶</button><button id="zo" title="Riduci">−</button><button id="fit" title="Centra">⌖</button><button id="zi" title="Ingrandisci">+</button></div>
-<div id="fab"><span id="lb"></span><button id="ac" title="Aggiungi un ramo">+</button></div>
+<div class="float gl" id="bl"><button class="ib" id="un" title="Annulla"><svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button><button class="ib" id="zo" title="Riduci"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button><button class="ib" id="fit" title="Centra"><svg viewBox="0 0 24 24"><path d="M4 9V5.5A1.5 1.5 0 0 1 5.5 4H9M15 4h3.5A1.5 1.5 0 0 1 20 5.5V9M20 15v3.5a1.5 1.5 0 0 1-1.5 1.5H15M9 20H5.5A1.5 1.5 0 0 1 4 18.5V15"/></svg></button><button class="ib" id="zi" title="Ingrandisci"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button></div>
+<div id="fab"><span id="lb" class="gl"></span><button id="ac" title="Aggiungi un ramo"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button></div>
+<div class="scrim" id="xs"><div class="sheet" role="dialog" aria-label="Esporta">
+ <div class="sh-h"><b>Esporta</b><button class="ib" id="xc" aria-label="Chiudi"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+ <div id="pv" class="pv"></div><div id="pi" class="pinfo"></div>
+ <div class="seg" id="fm"></div><div class="grp" id="op"></div>
+ <div class="sh-f"><button class="ghost" id="xp">Stampa</button><span style="flex:1"></span><button class="ghost" id="xcp">Copia</button><button class="cta" id="xd">Scarica</button></div>
+</div></div>
 <div id="pa"></div><div id="ts"></div>
 <input type="file" id="fi" accept="image/*" hidden><input type="file" id="fj" accept=".json,application/json" hidden>
 <script src="js/core.js"></script>

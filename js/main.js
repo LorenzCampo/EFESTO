@@ -1,6 +1,6 @@
 /* EFESTO – Eventi (mouse, tastiera, pulsanti) e avvio */
 const sv=$("#sv");
-sv.addEventListener("pointerdown",e=>{sv.setPointerCapture(e.pointerId);const t=e.target.closest(".nd"),ad=e.target.closest(".add"),rz=e.target.closest(".rz");$("#dr").classList.remove("open");$("#menu").classList.remove("open");
+sv.addEventListener("pointerdown",e=>{sv.setPointerCapture(e.pointerId);const t=e.target.closest(".nd"),ad=e.target.closest(".add"),rz=e.target.closest(".rz");$("#dr").classList.remove("open");
  if(linkMode){linkMode=false;if(t&&!ad&&!rz)reparent(sel,t.dataset.id);lab();return}
  if(ad){setSel(ad.dataset.id);addChild();return}
  if(rz){const n=N(rz.dataset.id);rs={id:n.id,sx:e.clientX,sy:e.clientY,w:n._w,h:n._h,m:0};return}
@@ -45,9 +45,8 @@ $("#nm").oninput=e=>{M.name=e.target.value;save()};
 $("#zi").onclick=()=>{const r=sv.getBoundingClientRect();zoomAt(1.25,r.width/2,r.height/2)};
 $("#zo").onclick=()=>{const r=sv.getBoundingClientRect();zoomAt(.8,r.width/2,r.height/2)};
 $("#fit").onclick=fit;window.addEventListener("resize",()=>{fit()});
-$("#bm").onclick=()=>{$("#menu").classList.remove("open");$("#dr").classList.toggle("open")};
-$("#ex").onclick=()=>{$("#dr").classList.remove("open");$("#menu").classList.toggle("open")};
-$("#menu").onclick=e=>{const b=e.target.closest("button");if(b){$("#menu").classList.remove("open");act(b.dataset.a)}};
+$("#bm").onclick=()=>{$("#dr").classList.toggle("open")};
+$("#imp").onclick=()=>{$("#dr").classList.remove("open");$("#fj").click()};
 $("#nw").onclick=()=>{persist();openMap(mk());persist();$("#dr").classList.remove("open")};
 $("#ml").onclick=e=>{const x=e.target.closest("[data-x]");
  if(x){e.stopPropagation();if(x.dataset.arm!=="1"){x.dataset.arm="1";x.textContent="Sicuro?";return}const ix=(LS.get("ef_idx")||[]).filter(i=>i.id!==x.dataset.x);LS.set("ef_idx",ix);LS.del("ef_"+x.dataset.x);if(x.dataset.x===M.id){const nx=ix[0]&&LS.get("ef_"+ix[0].id);openMap(nx||mk());persist()}else renderList();return}

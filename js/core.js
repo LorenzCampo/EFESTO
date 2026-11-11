@@ -1,6 +1,7 @@
 /* EFESTO – Stato, utilità e costanti */
 const $=s=>document.querySelector(s),IMH=84;
-const PAL=["#e8590c","#4c6ef5","#12b886","#e64980","#fab005","#7950f2","#15aabf","#495057"];
+const PAL=["#0a84ff","#ff9f0a","#30d158","#ff375f","#ffd60a","#bf5af2","#64d2ff","#8e8e93"];
+const SHI={pill:'<svg viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/></svg>',round:'<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3.5"/></svg>',rect:'<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx=".8"/></svg>',ell:'<svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9.5" ry="6.5"/></svg>'};
 const SHP=["pill","round","rect","ell"],GL={pill:"⬭",round:"▢",rect:"◻",ell:"◯"};
 const FONTS={sys:{n:"Standard",s:"system-ui,sans-serif"},serif:{n:"Serif (Georgia)",s:"Georgia,'Times New Roman',serif"},mono:{n:"Monospazio",s:"ui-monospace,Menlo,Consolas,monospace"},
  verdana:{n:"Verdana (leggibile)",s:"Verdana,Geneva,sans-serif"},comic:{n:"Comic (DSA)",s:"'Comic Sans MS','Comic Neue','Chalkboard SE',cursive"},

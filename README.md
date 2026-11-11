@@ -42,3 +42,12 @@ Carica l'intera cartella su Netlify (trascina la cartella), Cloudflare Pages, Ve
 - Spostare il collegamento: trascina un ramo sopra un altro (si evidenzia tratteggiato) oppure seleziona il ramo, premi 🔗 e tocca il nuovo ramo.
 - Ctrl+B / Ctrl+I / Ctrl+U: grassetto, corsivo, sottolineato.
 - Nelle esportazioni (PNG/SVG/PDF) i font accessibili vengono inclusi solo se il sito è servito via web (http/https), non aprendo il file con doppio clic.
+
+## Esportazione
+Il pulsante in alto a destra apre il foglio «Esporta», con anteprima e opzioni:
+- **PDF**: foglio A4/A3/Letter, orientamento (auto/orizzontale/verticale), margini, titolo sul foglio. Contiene la mappa come immagine ad alta risoluzione (300 dpi).
+- **PNG**: risoluzione 1×–4×, sfondo bianco o trasparente, pulsante «Copia» negli appunti.
+- **SVG**: vettoriale, sfondo bianco o trasparente.
+- **JSON**: file di backup, riapribile con «Importa mappa» nel pannello Mappe.
+- **Stampa**: usa le stesse impostazioni di foglio, orientamento e margini del PDF.
+Le scelte vengono ricordate al prossimo utilizzo.

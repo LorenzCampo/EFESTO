@@ -24,7 +24,7 @@ function fit(){const r=$("#sv").getBoundingClientRect(),q=bounds(),w=q.c-q.a,h=q
 function zoomAt(f,px,py){const k=Math.min(4,Math.max(.1,view.k*f)),r=k/view.k;view.x=px-(px-view.x)*r;view.y=py-(py-view.y)*r;view.k=k;setView()}
 function setSel(id){sel=id;document.querySelectorAll(".nd").forEach(g=>g.classList.toggle("sel",g.dataset.id===id));panel();posTb();lab()}
 function lab(){const n=N(sel);if(linkMode){$("#lb").textContent="Tocca il ramo a cui collegarlo";return}$("#lb").textContent=M.nodes.length===1?"Premi + per aggiungere un ramo":n?"Nuovo ramo da «"+(n.t.length>22?n.t.slice(0,22)+"…":n.t)+"»":""}
-function panel(){const n=N(sel);if(!n)return;document.querySelectorAll(".sw").forEach(b=>b.classList.toggle("on",n.c===b.dataset.c));$("#cc").value=n.c;$("#t-sh").textContent=GL[n.s||"round"];$("#t-del").disabled=!n.p;$("#t-rm").style.display=n.img?"":"none";
+function panel(){const n=N(sel);if(!n)return;document.querySelectorAll(".sw").forEach(b=>b.classList.toggle("on",n.c===b.dataset.c));$("#cc").value=n.c;$("#t-sh").innerHTML=SHI[n.s||"round"];$("#t-del").disabled=!n.p;$("#t-rm").style.display=n.img?"":"none";
  $("#t-au").style.display=n.rw||n.rh?"":"none";$("#t-lk").disabled=!n.p;$("#t-font").value=FONTS[n.f]?n.f:"sys";$("#t-size").value=String(SIZES.includes(n._fs)?n._fs:15);
  $("#t-b").classList.toggle("on",isBold(n));$("#t-i").classList.toggle("on",!!n.i);$("#t-u").classList.toggle("on",!!n.u);
  [["l","#t-al"],["c","#t-ac"],["r","#t-ar"]].forEach(([k,id])=>$(id).classList.toggle("on",(n.a||"c")===k))}
