@@ -45,9 +45,13 @@ Carica l'intera cartella su Netlify (trascina la cartella), Cloudflare Pages, Ve
 
 ## Esportazione
 Il pulsante in alto a destra apre il foglio «Esporta», con anteprima e opzioni:
-- **PDF**: foglio A4/A3/Letter, orientamento (auto/orizzontale/verticale), margini, titolo sul foglio. Contiene la mappa come immagine ad alta risoluzione (300 dpi).
+- **PDF**: foglio A4/A3/Letter, orientamento (auto/orizzontale/verticale), margini, titolo sul foglio (spento di default). Contiene la mappa come immagine ad alta risoluzione (300 dpi).
 - **PNG**: risoluzione 1×–4×, sfondo bianco o trasparente, pulsante «Copia» negli appunti.
 - **SVG**: vettoriale, sfondo bianco o trasparente.
 - **JSON**: file di backup, riapribile con «Importa mappa» nel pannello Mappe.
 - **Stampa**: usa le stesse impostazioni di foglio, orientamento e margini del PDF.
 Le scelte vengono ricordate al prossimo utilizzo.
+
+## Stampa e condivisione
+- La stampa usa pagina senza margini e li disegna dentro il foglio: così il browser non aggiunge titolo, indirizzo, data o numero di pagina. Se salvi come PDF, il nome del file proposto è quello della mappa.
+- «Condividi» (dove il dispositivo lo permette, es. iPhone, iPad, Android, Mac con Safari) apre il menu di condivisione di sistema con il file scelto (PDF, PNG, SVG o JSON).

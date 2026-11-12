@@ -100,11 +100,12 @@ button>svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7
 .cta{background:var(--acc);color:#fff;font-weight:600;padding:0 22px;height:40px;border-radius:20px}
 .cta:disabled{opacity:.6}
 .ghost{background:var(--fill);height:40px;padding:0 16px;border-radius:20px;font-weight:500}
-/* stampa */
+/* stampa: pagina senza margini (niente scritte del browser), margini veri dentro il foglio */
 #pa{display:none}
-html.printing,body.printing{height:auto;overflow:visible}
+html.printing,body.printing{height:auto;overflow:visible;margin:0;background:#fff}
 body.printing #cv,body.printing #top,body.printing #bl,body.printing #fab,body.printing #dr,body.printing .float,body.printing #ts,body.printing .scrim{display:none}
-body.printing #pa{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
-#pa h1{font:600 12pt -apple-system,system-ui,sans-serif;margin:0 0 3mm;color:#444;align-self:flex-start}
+body.printing #pa{display:flex;flex-direction:column;box-sizing:border-box;overflow:hidden;break-after:avoid;background:#fff}
+#pa h1{font:600 12pt -apple-system,system-ui,sans-serif;margin:0 0 3mm;color:#444}
+#pa .pm{flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
 #pa svg{display:block;max-width:100%;break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-@page{size:A4;margin:10mm}
+@page{size:A4;margin:0}
